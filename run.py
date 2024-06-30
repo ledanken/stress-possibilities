@@ -18,6 +18,6 @@ SHEET = GSPREAD_CLIENT.open('Stress-Scale-2 (PP3)')
 
 stress_questions = SHEET.worksheet('Stress')
 
-data = stress_questions.get_all_values()
-
-print(data)
+for query in stress_questions.range('A1:A2'):
+    print(query.value)
+    
