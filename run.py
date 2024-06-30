@@ -18,6 +18,11 @@ SHEET = GSPREAD_CLIENT.open('Stress-Scale-2 (PP3)')
 
 stress_questions = SHEET.worksheet('Stress')
 
+print("ARE YOU SO STRESSED?")
+print("This is just to know the level stress you have been in.")
+print("Choose the number 0, 1, 2, 3 or 4 as your answer to each of the ten questions.")
+print("0 = never, 1 = almost never, 2 = sometimes, 3 = fairly often, 4 = very often \n")
+
 for query in stress_questions.range('A1:A2'):
-    print(query.value)
+    print(query.value + "\n")
     
